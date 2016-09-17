@@ -6,14 +6,11 @@ class ExcelBank < Excel
     import_file_contents file_path
 
   row_hashes = []
-    count = 0
-    while @file_contents.sheets[count]
-      @file_contents.sheets[count].rows.each do |row|
-        row_hash = get_row_hash row
-        row_hashes << row_hash
-      end
-      count = count + 1
+    @file_contents.sheets[0].rows.each do |row|
+      row_hash = get_row_hash row
+      row_hashes << row_hash
     end
+
     awesome_print row_hashes
 
     # row = @file_contents.sheets[0].rows[0]
