@@ -7,7 +7,7 @@ class ExcelBank < Excel
 
   row_hashes = []
     count = 0
-    while count < 2
+    while @file_contents.sheets[count]
       @file_contents.sheets[count].rows.each do |row|
         row_hash = get_row_hash row
         row_hashes << row_hash
