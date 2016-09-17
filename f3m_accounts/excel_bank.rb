@@ -24,9 +24,7 @@ class ExcelBank < Excel
     {
         account_code: row[0],
         date:         row[1],
-        bank_info:    row[2],
         amount:       row[3],
-        sub_code:     row[4],
         memo:         row[5]
     }
   end
