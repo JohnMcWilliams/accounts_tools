@@ -1,5 +1,4 @@
 require 'simple_xlsx_reader'
-require 'axlsx'
 
 class FileTools
 
